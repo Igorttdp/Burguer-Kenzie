@@ -1,23 +1,39 @@
 import { Header } from "./Header";
-import logo from "../../imgs/logo.svg";
-    
-const HamburguerHeader = ({ search, setSearch }) => {
+import logoLight from "../../imgs/logoLight.svg";
+import logoDarkmode from "../../imgs/logoDarkmode.svg";
+import { useContext } from "react";
+import { SearchContext } from "../../context/SearchContext";
+import SwitchButton from "../Switch";
+
+const HamburguerHeader = ({ darkmode, setDarkmode }) => {
+  const { search, setSearch } = useContext(SearchContext);
+
   return (
     <Header>
       <div className="header__container">
         <div className="header__logo">
-          <img src={logo} alt="Burguer Kenzie" />
-        </div>
-        <form className="header__search">
-          <input
-            onChange={(e) => {
-              setSearch(e.target.value);
-            }}
-            placeholder="Digitar Pesquisa"
-            type="text"
-            value={search}
+          <img
+            src={darkmode === true ? logoDarkmode : logoLight}
+            alt="Burguer Kenzie"
           />
-        </form>
+        </div>
+        <div className="header__forms">
+          <SwitchButton
+            setDarkmode={setDarkmode}
+            darkmode={darkmode}
+            role="button"
+          />
+          <form className="header__search">
+            <input
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              placeholder="Digitar Pesquisa"
+              type="text"
+              value={search}
+            />
+          </form>
+        </div>
       </div>
     </Header>
   );
