@@ -10,6 +10,20 @@ export const ProductCard = styled.ul`
   align-items: center;
   justify-content: flex-start;
 
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #707070;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar {
+    height: 5px;
+    background-color: transparent;
+  }
+
   @media (min-width: 1400px) {
     max-width: 1400px;
     justify-content: flex-start;
@@ -44,7 +58,7 @@ export const ProductCard = styled.ul`
     img {
       height: 150px;
       object-fit: contain;
-      background-color: var(--grey-0);
+      background-color: ${(props) => props.theme.lightBgSecundary};
     }
   }
 
