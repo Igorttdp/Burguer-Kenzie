@@ -4,7 +4,8 @@ export const MainDiv = styled.div`
   min-height: 110vh;
   max-width: 90%;
   width: 100%;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 0;
+  padding-bottom: 4rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
