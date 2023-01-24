@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
-  background-color: var(--grey-0);
+  background-color: ${(props) => props.theme.lightBgSecundary};
   padding: 1.5rem 0;
 
   @media (min-width: 1400px) {
@@ -31,6 +31,13 @@ export const Header = styled.header`
     flex-flow: column nowrap;
     gap: 1.4rem;
 
+    .header__forms {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
     .header__logo {
       align-self: center;
 
@@ -47,7 +54,8 @@ export const Header = styled.header`
 
       input {
         width: 100%;
-        background-color: #fff;
+        background-color: ${(props) => props.theme.lightBgPrimary};
+        color: ${(props) => props.theme.lightColor};
         border: 2px solid var(--grey-20);
         font-size: 1.6rem;
         padding: 2rem 11.7rem 2rem 1.5rem;
