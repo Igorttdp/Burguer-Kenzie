@@ -1,4 +1,9 @@
-const Results = ({ filteredProducts, search }) => {
+import { useContext } from "react";
+import { SearchContext } from "../../context/SearchContext";
+
+const Results = () => {
+  const { search } = useContext(SearchContext);
+
   if (search !== "") {
     return (
       <>
