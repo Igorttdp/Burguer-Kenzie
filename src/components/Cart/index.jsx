@@ -1,69 +1,59 @@
-const Cart = ({ products, cartProducts, setCartProducts, total, setTotal }) => {
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { CartContainer } from "./CartContainer";
+import AmountController from "../AmountController";
 
-  const setCartTotal = () => {
-    if (cartProducts.length !== 0) {
-      setTotal(cartProducts.reduce((pv, cv) => {
-        return pv + cv.totalPrice
-      }, 0))
-    }
-  }
+const Cart = () => {
+  const { removeItem, removeAll, total, cartProducts } =
+    useContext(CartContext);
 
-  setCartTotal()
-
-  const removeItem = (e) => {
-    const el = e.target;
-
-    const id = Number(el.parentElement.getAttribute("aria-labelledby"))
-
-    setCartProducts(cartProducts.filter(el => {
-      if (el.id === id) {
-        el.amount = 1;
-        el.totalPrice = el.price
-      }
-      
-      return el.id !== id
-    }))
-  }
-
-  const removeAll = () => {
-    setCartProducts([])
-  };
-
-  if (products.length === 0) {
+  if (cartProducts.length === 0) {
     return (
-      <>
-        <div className="empty">
-          <h2>Sua sacola está vazia</h2>
-          <p>Adicione itens</p>
+      <CartContainer>
+        <div className="header">
+          <h2>Carrinho de Compras</h2>
         </div>
-      </>
+        <div className="body">
+          <div className="empty">
+            <h2>Sua sacola está vazia</h2>
+            <p>Adicione itens</p>
+          </div>
+        </div>
+      </CartContainer>
     );
   }
 
   return (
-    <>
-      <ul>
-        {products.map((el) => (
-          <li aria-labelledby={el.id} key={el.id}>
-            <img src={el.img} alt={el.name} />
-            <div>
-              <h2>{el.name}</h2>
-              <span>{el.category}</span>
-            </div>
-            <button onClick={(e) => removeItem(e)}>Remover</button>
-            <span>Qtde: {el.amount}</span>
-          </li>
-        ))}
-      </ul>
-      <hr />
-      <div className="total">
-        <span>
-          <strong>Total</strong>
-        </span>
-        <span>R$ {total.toFixed(2)}</span>
+    <CartContainer>
+      <div className="header">
+        <h2>Carrinho de Compras</h2>
       </div>
-      <button className="removeAll" onClick={() => removeAll()}>Remover Todos</button>
-    </>
+      <div className="body">
+        <ul>
+          {cartProducts.map((el) => (
+            <li aria-labelledby={el.id} key={el.id}>
+              <img src={el.img} alt={el.name} />
+              <div>
+                <h2>{el.name}</h2>
+                <span>{el.category}</span>
+              </div>
+              <button onClick={(e) => removeItem(e)}>Remover</button>
+              <AmountController amount={el.amount} />
+            </li>
+          ))}
+        </ul>
+        <hr />
+        <div className="total">
+          <span>
+            <strong>Total</strong>
+          </span>
+          <span>R$ {total.toFixed(2)}</span>
+        </div>
+        <button className="removeAll" onClick={removeAll}>
+          Remover Todos
+        </button>
+      </div>
+    </CartContainer>
   );
 };
 
