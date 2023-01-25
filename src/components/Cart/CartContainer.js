@@ -75,6 +75,11 @@ export const CartContainer = styled.div`
         gap: 1.5rem;
         position: relative;
 
+        @media (max-width: 400px) {
+          flex-flow: column nowrap;
+          gap: unset;
+        }
+
         > span {
           position: absolute;
           right: 0;
@@ -109,6 +114,10 @@ export const CartContainer = styled.div`
           top: 0;
           right: 0;
 
+          @media (max-width: 400px) {
+            top: 20px;
+          }
+
           :hover {
             background-color: var(--negative);
             color: #fff;
@@ -133,11 +142,11 @@ export const CartContainer = styled.div`
       justify-content: space-between;
 
       span {
-        color: var(--grey-50);
+        color: ${(props) => props.theme.lightTotalSpanColor};
         font-size: 1.4rem;
 
         strong {
-          color: var(--grey-100);
+          color: ${(props) => props.theme.lightTotalSpanTitleColor};
           font-weight: 700;
         }
       }
