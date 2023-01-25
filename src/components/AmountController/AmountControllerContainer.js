@@ -6,6 +6,10 @@ const AmountControllerContainer = styled.table`
   right: 0;
   width: 82.69px;
 
+  @media (max-width: 400px) {
+    bottom: 8px;
+  }
+
   tr {
     display: flex;
     align-items: center;
@@ -22,6 +26,11 @@ const AmountControllerContainer = styled.table`
         align-items: center;
         justify-content: center;
         transition: all 0.2s;
+
+        :disabled {
+          background-color: #ffa0a0;
+          cursor: not-allowed;
+        }
       }
 
       :nth-child(1) {
