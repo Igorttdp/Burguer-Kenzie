@@ -25,6 +25,8 @@ function App() {
     lightBorderRemoveAllBtn: "transparent",
     darkBorderRemoveAllBtn: "#E60000",
     lightRemoveAllBtnColor: "#828282",
+    lightTotalSpanColor: "#828282",
+    lightTotalSpanTitleColor: "#000",
   };
 
   const invertedTheme = ({
@@ -38,7 +40,6 @@ function App() {
     darkRemoveAllBtn,
     lightBorderRemoveAllBtn,
     darkBorderRemoveAllBtn,
-    lightRemoveAllBtnColor,
   }) => ({
     lightBgPrimary: darkBgPrimary,
     darkBgPrimary: lightBgPrimary,
@@ -51,6 +52,8 @@ function App() {
     lightBorderRemoveAllBtn: darkBorderRemoveAllBtn,
     darkBorderRemoveAllBtn: lightBorderRemoveAllBtn,
     lightRemoveAllBtnColor: darkColor,
+    lightTotalSpanColor: darkColor,
+    lightTotalSpanTitleColor: darkColor,
   });
 
   const [darkmode, setDarkmode] = useState(false);
