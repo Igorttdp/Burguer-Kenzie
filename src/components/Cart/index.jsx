@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { CartContainer } from "./CartContainer";
 import AmountController from "../AmountController";
 
-const Cart = () => {
+const Cart = ({ modal }) => {
   const { removeItem, removeAll, total, cartProducts } =
     useContext(CartContext);
 
@@ -37,7 +37,7 @@ const Cart = () => {
                 <h2>{el.name}</h2>
                 <span>{el.category}</span>
               </div>
-              <button onClick={(e) => removeItem(e)}>Remover</button>
+              <button onClick={removeItem}>Remover</button>
               <AmountController amount={el.amount} />
             </li>
           ))}

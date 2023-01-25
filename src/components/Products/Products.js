@@ -40,6 +40,7 @@ export const ProductCard = styled.ul`
   }
 
   li {
+    cursor: pointer;
     max-width: 300px;
     min-width: 300px;
     height: 350px;

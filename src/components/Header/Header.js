@@ -61,6 +61,10 @@ export const Header = styled.header`
         padding: 2rem 11.7rem 2rem 1.5rem;
         border-radius: 8px;
 
+        @media (max-width: 400px) {
+          padding: 2rem 1.5rem;
+        }
+
         ::placeholder {
           color: var(--grey-20);
         }

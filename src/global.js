@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
 
         /* COLORS */
-
         /* primary palete */
         --color-primary: #27AE60;
         --color-primary-50: #93D7AF;

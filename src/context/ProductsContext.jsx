@@ -18,26 +18,38 @@ const ProductsProvider = ({ children }) => {
       .catch((e) => console.log(e));
   }, []);
 
-  const addProducts = (e) => {
+  const addProducts = (e, product) => {
     const el = e.target;
 
-    const productId = Number(
-      el.parentElement.parentElement.getAttribute("aria-labelledby")
-    );
+    const productId = product
+      ? product.id
+      : Number(el.parentElement.parentElement.getAttribute("aria-labelledby"));
 
     const [newProduct] = products.filter((el) => el.id === productId);
-    if (!newProduct.amount) newProduct.amount = 1;
-    if (!newProduct.totalPrice) newProduct.totalPrice = newProduct.price;
+    if (!product && !newProduct.amount) newProduct.amount = 1;
+    if (!product && !newProduct.totalPrice)
+      newProduct.totalPrice = newProduct.price;
+    if (product && !newProduct.amount) newProduct.amount = product.amount;
+    if (product && !newProduct.totalPrice)
+      newProduct.totalPrice = product.price;
 
     const verify = cartProducts.some((el) => el.id === newProduct.id);
 
     if (!verify) {
       setCartProducts([...cartProducts, newProduct]);
     } else {
-      newProduct.totalPrice += newProduct.price;
-      newProduct.amount++;
+      if (!product) {
+        newProduct.totalPrice += newProduct.price;
+        newProduct.amount++;
+      } else {
+        newProduct.totalPrice += product.totalPrice;
+        newProduct.amount += product.amount;
+      }
+
       setCartProducts([...cartProducts]);
     }
+
+    return;
   };
 
   return (
