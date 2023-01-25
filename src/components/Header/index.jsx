@@ -8,6 +8,12 @@ import SwitchButton from "../Switch";
 const HamburguerHeader = ({ darkmode, setDarkmode }) => {
   const { search, setSearch } = useContext(SearchContext);
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+
+    return;
+  };
+
   return (
     <Header>
       <div className="header__container">
@@ -25,9 +31,7 @@ const HamburguerHeader = ({ darkmode, setDarkmode }) => {
           />
           <form className="header__search">
             <input
-              onChange={(e) => {
-                setSearch(e.target.value);
-              }}
+              onChange={handleSearch}
               placeholder="Digitar Pesquisa"
               type="text"
               value={search}
