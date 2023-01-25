@@ -49,44 +49,58 @@ const CartProvider = ({ children }) => {
     setCartProducts([]);
   };
 
-  const increaseProduct = (e) => {
-    const el = e.target;
+  const increaseProduct = (e, newProduct, setNewProduct) => {
+    if (!newProduct) {
+      const el = e.target;
 
-    const id = Number(
-      el.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute(
-        "aria-labelledby"
-      )
-    );
+      const id = Number(
+        el.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute(
+          "aria-labelledby"
+        )
+      );
 
-    const product = cartProducts.find((el) => el.id === id);
+      const product = cartProducts.find((el) => el.id === id);
+      product.amount += 1;
+      product.totalPrice += product.price;
+      setCartProducts([...cartProducts]);
+    } else {
+      const product = newProduct;
+      product.amount += 1;
+      product.totalPrice += product.price;
+      setNewProduct({ ...product });
+    }
 
-    product.amount += 1;
-    product.totalPrice += product.price;
-
-    setCartProducts([...cartProducts]);
     return;
   };
 
-  const decreaseProduct = (e) => {
-    const el = e.target;
+  const decreaseProduct = (e, newProduct, setNewProduct) => {
+    if (!newProduct) {
+      const el = e.target;
 
-    const id = Number(
-      el.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute(
-        "aria-labelledby"
-      )
-    );
+      const id = Number(
+        el.parentElement.parentElement.parentElement.parentElement.parentElement.getAttribute(
+          "aria-labelledby"
+        )
+      );
 
-    const product = cartProducts.find((el) => el.id === id);
+      const product = cartProducts.find((el) => el.id === id);
 
-    if (product.amount === 1) {
-      setCartProducts(cartProducts.filter((el) => el.id !== id));
-      return;
+      if (product.amount === 1) {
+        setCartProducts(cartProducts.filter((el) => el.id !== id));
+        return;
+      }
+
+      product.amount -= 1;
+      product.totalPrice -= product.price;
+
+      setCartProducts([...cartProducts]);
+    } else {
+      const product = newProduct;
+      product.amount -= 1;
+      product.totalPrice -= product.price;
+      setNewProduct({ ...product });
     }
 
-    product.amount -= 1;
-    product.totalPrice -= product.price;
-
-    setCartProducts([...cartProducts]);
     return;
   };
 
