@@ -31,7 +31,7 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-lanche.png" alt="Lanche"/></td>
+            <td style="text-align: center;" width="50%"><img src="./assets/bk-lanche.png" alt="Lanche"/></td>
             <td width="50%"><p>Na tela inicial, temos uma lista com todos os lanches disponíveis. Clicando em <strong>Adicionar</strong>, o produto selecionado vai direto para o carrinho. <strong>Veja abaixo:</strong></p></td>
         </tr>
     </tbody>
@@ -47,8 +47,8 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-carrinho.png" alt="Carrinho" /></td>
-            <td width="50%"><img src="./assets/bk-carrinhoInferior.png" alt="Parte inferiora do Carrinho" /></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-carrinho.png" alt="Carrinho" /></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-carrinhoInferior.png" alt="Parte inferiora do Carrinho" /></td>
         </tr>
     </tbody>
 </table>
@@ -84,8 +84,8 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-tablet.png" alt="Burguer Kenzie tela Tablet"/></td>
-            <td width="50%"><img src="./assets/bk-mobile.png" alt="Burguer Kenzie tela Celular"/></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-tablet.png" alt="Burguer Kenzie tela Tablet"/></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-mobile.png" alt="Burguer Kenzie tela Celular"/></td>
         </tr>
     </tbody>
 </table>

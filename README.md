@@ -31,8 +31,8 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-lanche.png" alt="Food"/></td>
-            <td width="50%"><p>On the home screen, we have a list of all available foods. Clicking on <strong>Add</strong>, the selected product goes directly to the cart. <strong>See below:</strong></p></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-lanche.png" alt="Food"/></td>
+            <td width="50%" style="text-align: center;"><p>On the home screen, we have a list of all available foods. Clicking on <strong>Add</strong>, the selected product goes directly to the cart. <strong>See below:</strong></p></td>
         </tr>
     </tbody>
 </table>
@@ -47,8 +47,8 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-carrinho.png" alt="Cart" /></td>
-            <td width="50%"><img src="./assets/bk-carrinhoInferior.png" alt="Bottom of Cart" /></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-carrinho.png" alt="Cart" /></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-carrinhoInferior.png" alt="Bottom of Cart" /></td>
         </tr>
     </tbody>
 </table>
@@ -84,8 +84,8 @@
 <table>
     <tbody>
         <tr>
-            <td width="50%"><img src="./assets/bk-tablet.png" alt="Burguer Kenzie on Tablet Screen"/></td>
-            <td width="50%"><img src="./assets/bk-mobile.png" alt="Burguer Kenzie on Mobile Screen"/></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-tablet.png" alt="Burguer Kenzie on Tablet Screen"/></td>
+            <td width="50%" style="text-align: center;"><img src="./assets/bk-mobile.png" alt="Burguer Kenzie on Mobile Screen"/></td>
         </tr>
     </tbody>
 </table>
