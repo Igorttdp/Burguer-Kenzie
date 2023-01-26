@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+<p>Para README em Português, <a href="./README-ptbr.md" target="blank_">clique aqui</a></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Preview</h2>
+<img src="./assets/bk-preview.png" alt="Burguer Kenzie Preview" />
 
-## Available Scripts
+<h1>About</h1>
+<p>Burger Kenzie is a simple application that simulates fast food delivery. Perhaps your only defect is not completing the order 😅. The application consumes an api (GET: https://hamburgueria-kenzie-json-serve.herokuapp.com/products), handles the response data and renders it to the screen. Having a simple project as an initial proposal, I took the liberty to develop some extra features and refactor some points of the code.</p>
 
-In the project directory, you can run:
+<br/>
 
-### `yarn start`
+<h2>Project Structuring and Technologies</h2>
+<p>In this project, concepts of <strong>API Consumption</strong>, <strong>React Hooks</strong>, <strong>React Context</strong>, <strong>Componentization</strong> <strong>Conditional Rendering</strong> and <strong>Mobile First</strong>.</p>
+<img src="./assets/bk-estrutura.png" alt="Folder Structure" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/><br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Technologies / Libs</h3>
+<ul>
+    <li>Axios</li>
+    <li>React-Js</li>
+    <li>React Context</li>
+    <li>Radix (Dialog & Switch)</li>
+    <li>Styled-Components</li>
+</ul>
 
-### `yarn test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2>How it Works</h2>
 
-### `yarn build`
+<h3>Add food to Cart</h3>
+<table>
+    <tbody>
+        <tr>
+            <td width="50%"><img src="./assets/bk-lanche.png" alt="Food"/></td>
+            <td width="50%"><p>On the home screen, we have a list of all available foods. Clicking on <strong>Add</strong>, the selected product goes directly to the cart. <strong>See below:</strong></p></td>
+        </tr>
+    </tbody>
+</table>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
+<img src="./assets/bk-noCarrinho.png" alt="Burguer Kenzie with food on the Cart" />
+<br/><br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3>Cart</h3>
+<p>On the right side we can see the <strong>Cart</strong>. Here we have full control over our products. We can <strong>adjust the quantity</strong> of our products and also <strong>remove all</strong> of them. At the bottom we have the total value being shown on the screen and the button to remove all products.</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<table>
+    <tbody>
+        <tr>
+            <td width="50%"><img src="./assets/bk-carrinho.png" alt="Cart" /></td>
+            <td width="50%"><img src="./assets/bk-carrinhoInferior.png" alt="Bottom of Cart" /></td>
+        </tr>
+    </tbody>
+</table>
 
-### `yarn eject`
+<br/><br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h3>Quantities</h3>
+<p>If you want to add several quantities of the same product at once, you can <strong>click on the card</strong> to open a <strong>modal</strong> (or <strong>dialog box</strong>), in the center of the screen.</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./assets/bk-modal.png" alt="Food Modal" />
+<br/><br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p>In the left part we can see all the available information of the selected snack. At the bottom we can <strong>select the desired quantity</strong> and <strong>add</strong> the product to the <strong>cart</strong>.</p>
+<img src="./assets/bk-modalExp.jpeg" alt="Food Modal Left Side"/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br/><br/>
 
-## Learn More
+<p>On the right we can see our Component <strong>"Cart"</strong>. In it we can do all the functions. Add/Remove products and their quantities and remove all products.</p>
+<img src="./assets/bk-modalExp2.png" alt="Food Modal Right Side"/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br/><br/>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h2>Extra Features</h2>
 
-### Code Splitting
+<h3>Darkmode</h3>
+<img src="./assets/switchOff.png" alt="Switch Button Off"/>
+<img src="./assets/switchOn.png" alt="Switch Button On"/>
+<img src="./assets/bk-darkmode.png" alt="Burguer Kenzie Darkmode"/>
+<br/><br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h3>Responsiveness and Mobile-First</h3>
 
-### Analyzing the Bundle Size
+<table>
+    <tbody>
+        <tr>
+            <td width="50%"><img src="./assets/bk-tablet.png" alt="Burguer Kenzie on Tablet Screen"/></td>
+            <td width="50%"><img src="./assets/bk-mobile.png" alt="Burguer Kenzie on Mobile Screen"/></td>
+        </tr>
+    </tbody>
+</table>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br/><br/>
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h2><strong>Link of Project:</strong> <a href="https://kenzie-burguer.igorttdp.vercel.app/" target="blank_">Burguer Kenzie</a></h2>
