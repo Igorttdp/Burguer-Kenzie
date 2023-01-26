@@ -15,7 +15,7 @@ import AppContainer from "./components/AppContainer";
 function App() {
   const theme = {
     lightBgPrimary: "#ffffff",
-    darkBgPrimary: "#1e201f",
+    darkBgPrimary: "#222423",
     lightBgSecundary: "#F5F5F5",
     darkBgSecundary: "#181a18",
     lightColor: "#000",
