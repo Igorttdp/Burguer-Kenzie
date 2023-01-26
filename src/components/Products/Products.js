@@ -50,6 +50,11 @@ export const ProductCard = styled.ul`
 
     :hover {
       border-color: var(--color-primary);
+      scale: 0.98;
+
+      button {
+        scale: 1.02;
+      }
     }
   }
 
